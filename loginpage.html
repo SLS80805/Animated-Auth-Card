@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Signup Card</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <main id="start">
+    <!-- Radio toggles for pure CSS tab switching -->
+    <input type="radio" name="form" id="login" checked>
+    <input type="radio" name="form" id="signup">
+
+    <!-- Tab navigation labels -->
+    <nav id="a">
+      <label for="login">Login</label>
+      <label for="signup">Sign Up</label>
+    </nav>
+
+    <!-- Login Form -->
+    <form id="loginform" action="#" method="POST">
+      <div class="input-group">
+        <input type="text" placeholder="Username" required>
+      </div>
+      <div class="input-group">
+        <input type="password" placeholder="Password" required>
+      </div>
+      <button type="submit">Log In</button>
+    </form>
+
+    <!-- Signup Form -->
+    <form id="signupform" action="#" method="POST">
+      <div class="input-group">
+        <input type="text" placeholder="Username" required>
+      </div>
+      <div class="input-group">
+        <input type="email" placeholder="Email Address" required>
+      </div>
+      <div class="input-group">
+        <input type="password" placeholder="Create Password" required>
+      </div>
+      <div class="input-group">
+        <input type="password" placeholder="Confirm Password" required>
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+  </main>
+</body>
+</html>

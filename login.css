@@ -1,0 +1,124 @@
+/* Global Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Card Container */
+#start {
+  width: 340px;
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Hide Radio Buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Navigation Tabs */
+#a {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+#a label {
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+#a label:hover {
+  background: #6dd5ed;
+  color: #ffffff;
+}
+
+/* Tab Switch Logic */
+#login:checked ~ #a label[for="login"],
+#signup:checked ~ #a label[for="signup"] {
+  background: #2193b0;
+  color: #ffffff;
+}
+
+/* Form Visibility Logic */
+#loginform, #signupform {
+  display: none;
+  animation: fade 0.4s ease-in-out;
+}
+
+#login:checked ~ #loginform,
+#signup:checked ~ #signupform {
+  display: block;
+}
+
+/* Inputs & Buttons */
+.input-group {
+  margin-bottom: 12px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #2193b0;
+  box-shadow: 0 0 8px rgba(33, 147, 176, 0.4);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 25px;
+  background: #2193b0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #176d8a;
+  transform: scale(1.02);
+}
+
+/* Entrance Animation */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
